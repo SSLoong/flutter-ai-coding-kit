@@ -1,0 +1,182 @@
+# Flutter Core Rules for Cursor AI
+
+**用途**：放置在项目的 `.cursor/rules` 或 `.cursorrules` 文件中，指导 Cursor AI 生成符合 Flutter 规范的代码。
+
+---
+
+## 🎯 核心规则
+
+### 1. Flutter & Dart 规范
+
+- 始终遵循 [Effective Dart](https://dart.dev/guides/language/effective-dart) 风格指南
+- 使用 `flutter analyze` 和 `dart format` 检查代码
+- 优先使用 `const` 构造函数提升性能
+- Widget 树层级不要过深（建议 ≤ 5 层，超过需拆分）
+
+### 2. 空安全（Null Safety）
+
+- 所有新代码必须支持 null-safety
+- 避免使用 `!`（强制解包），优先用 `?.` 或 `??`
+- 函数参数优先用 `required` 或默认值，减少可空参数
+
+### 3. Widget 设计
+
+- **优先 StatelessWidget**：无状态优先，性能更好
+- **职责单一**：一个 Widget 只做一件事
+- **可测试性**：依赖通过构造函数注入，不在 Widget 内直接实例化服务
+- **Key 使用**：列表项必须有 `Key`，避免动画闪烁和状态错乱
+
+示例：
+
+```dart
+// ✅ 好的设计
+class UserCard extends StatelessWidget {
+  const UserCard({
+    Key? key,
+    required this.user,
+    required this.onTap,
+  }) : super(key: key);
+
+  final User user;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: Text(user.name),
+        onTap: onTap,
+      ),
+    );
+  }
+}
+
+// ❌ 不好的设计
+class UserCard extends StatefulWidget {
+  final String userId; // 在 Widget 内部调 API
+  // ...
+}
+```
+
+### 4. 状态管理
+
+根据项目选择（在 AGENTS.md 中明确）：
+
+- **flutter_bloc**：用 Cubit/Bloc + BlocProvider/BlocBuilder
+- **riverpod**：用 Provider + ConsumerWidget
+- **provider**：用 ChangeNotifier + Consumer
+
+**通用原则**：
+- 业务逻辑不写在 Widget 中
+- 状态变化通过状态管理层传递
+- UI 层只负责展示和交互
+
+### 5. 异步处理
+
+- 使用 `async/await`，避免 `.then()` 链式调用（除非性能关键场景）
+- 在 StatefulWidget 的 `dispose()` 前取消未完成的异步操作
+- 网络请求用 `dio` 或 `http`，统一错误处理
+
+### 6. 测试要求
+
+- **每个 Widget 必须有测试**（特殊情况除外，需注释说明）
+- 使用 `testWidgets()` 测试 Widget
+- 用 `mocktail` mock 依赖
+- 测试文件路径镜像 `lib/` 结构
+
+示例：
+
+```dart
+// lib/features/auth/presentation/widgets/login_button.dart
+// 对应测试：
+// test/features/auth/presentation/widgets/login_button_test.dart
+```
+
+### 7. 性能优化
+
+- 大列表用 `ListView.builder` 或 `ListView.separated`
+- 避免在 `build()` 中创建新对象（提取到 `const` 或成员变量）
+- 图片用 `CachedNetworkImage` 或 `Image.memory`
+- 复杂计算用 `compute()` 在隔离区执行
+
+### 8. 无障碍（Accessibility）
+
+- 所有交互元素添加 `Semantics` 或 `semanticsLabel`
+- 按钮、图片提供有意义的描述
+- 支持屏幕阅读器测试
+
+---
+
+## 🚫 常见错误避免
+
+### ❌ 错误示例 1：在 build() 中调用异步
+```dart
+@override
+Widget build(BuildContext context) {
+  fetchData(); // ❌ 每次 rebuild 都调用
+  return Text('...');
+}
+```
+
+**✅ 正确**：在 `initState()` 或用状态管理层调用
+
+---
+
+### ❌ 错误示例 2：不用 const
+```dart
+Widget build(BuildContext context) {
+  return Container(
+    child: Text('Hello'), // ❌ 每次都创建新对象
+  );
+}
+```
+
+**✅ 正确**：
+```dart
+Widget build(BuildContext context) {
+  return Container(
+    child: const Text('Hello'), // ✅ 编译期优化
+  );
+}
+```
+
+---
+
+### ❌ 错误示例 3：硬编码字符串
+```dart
+Text('Login') // ❌ 不支持国际化
+```
+
+**✅ 正确**：
+```dart
+Text(context.l10n.login) // 或用 strings.dart
+```
+
+---
+
+## 🤖 AI 生成代码 Checklist
+
+生成代码后自动检查：
+
+- [ ] 文件名符合 `snake_case.dart`
+- [ ] 类名符合 `PascalCase`
+- [ ] Widget 构造函数声明为 `const`（如可能）
+- [ ] Import 使用 `package:` 而非相对路径
+- [ ] 有对应测试文件（或说明为何不需要）
+- [ ] 运行 `flutter analyze` 无警告
+- [ ] 运行 `dart format .` 格式化
+
+---
+
+## 📚 项目特定规则
+
+（在这里添加你的项目自定义规则，例如：）
+
+- API 调用统一用 `core/network/api_client.dart`
+- 颜色定义在 `lib/app/theme/app_colors.dart`
+- 字体大小用 `AppTextStyle` 枚举
+- 图标用 `AppIcons` 统一管理
+
+---
+
+**更新日期**：2026-11-05

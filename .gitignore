@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Cursor
+.cursor/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Build artifacts (if any examples are added)
+build/
+.dart_tool/
+
+# Dependencies
+.packages
+pubspec.lock

@@ -48,7 +48,7 @@ flutter-ai-coding-kit/
 | [Widget 测试生成](workflows/widget-test-generation.md) | ✅ | 用 AI 为业务组件自动生成测试用例 |
 | Riverpod 状态重构 | 🚧 | 从 setState 迁移到 Riverpod |
 | go_router 导航改造 | 🚧 | 类型安全路由 + AI 辅助迁移 |
-| Golden 测试实践 | 🚧 | UI 快照测试与多尺寸验证 |
+| [Golden 测试实践](workflows/golden-test-practice.md) | ✅ | UI 快照测试与多尺寸验证 |
 | Patrol UI 自动化 | 🚧 | 端到端测试流程 |
 | Flavor 多环境配置 | 🚧 | dev/staging/prod 环境隔离 |
 | 性能 Timeline 分析 | 🚧 | AI 辅助解读性能数据 |

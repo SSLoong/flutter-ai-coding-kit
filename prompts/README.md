@@ -10,6 +10,10 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### State（状态管理）
+- [refactor-to-riverpod.md](state/refactor-to-riverpod.md) — 将现有代码重构到 Riverpod
+- [generate-riverpod-provider.md](state/generate-riverpod-provider.md) — 为新功能生成 Riverpod Provider
+
 ---
 
 ## 🎯 使用方法

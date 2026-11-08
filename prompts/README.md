@@ -10,6 +10,11 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### Navigation（路由）
+
+- [migrate-to-gorouter.md](navigation/migrate-to-gorouter.md) — 迁移到 go_router
+- [add-typed-route-and-features.md](navigation/add-typed-route-and-features.md) — 添加类型安全路由与功能
+
 ---
 
 ## 🎯 使用方法

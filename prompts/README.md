@@ -9,6 +9,8 @@
 ### Testing（测试）
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
+- [generate-patrol-test.md](testing/generate-patrol-test.md) — 生成 Patrol 端到端测试
+- [fix-patrol-flaky.md](testing/fix-patrol-flaky.md) — 修复不稳定的 Patrol 测试
 
 ---
 

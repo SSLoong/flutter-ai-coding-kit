@@ -49,7 +49,7 @@ flutter-ai-coding-kit/
 | Riverpod 状态重构 | 🚧 | 从 setState 迁移到 Riverpod |
 | go_router 导航改造 | 🚧 | 类型安全路由 + AI 辅助迁移 |
 | Golden 测试实践 | 🚧 | UI 快照测试与多尺寸验证 |
-| Patrol UI 自动化 | 🚧 | 端到端测试流程 |
+| [Patrol UI 自动化](workflows/patrol-ui-automation.md) | ✅ | 端到端测试流程 + 原生交互 |
 | Flavor 多环境配置 | 🚧 | dev/staging/prod 环境隔离 |
 | 性能 Timeline 分析 | 🚧 | AI 辅助解读性能数据 |
 | Semantics 无障碍 | 🚧 | 可访问性标签与测试 |

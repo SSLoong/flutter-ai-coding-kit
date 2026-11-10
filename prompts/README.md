@@ -10,6 +10,10 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### Flavor（多环境配置）
+- [generate-flavor-config.md](flavor/generate-flavor-config.md) — 从零生成 Flavor 配置
+- [debug-flavor-build-error.md](flavor/debug-flavor-build-error.md) — 排查 Flavor 构建错误
+
 ---
 
 ## 🎯 使用方法

@@ -10,6 +10,10 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### Performance（性能）
+- [interpret-timeline.md](performance/interpret-timeline.md) — 解读 DevTools Timeline 性能数据
+- [fix-jank-from-timeline.md](performance/fix-jank-from-timeline.md) — 修复 Timeline 诊断出的卡顿问题
+
 ---
 
 ## 🎯 使用方法

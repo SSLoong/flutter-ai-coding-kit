@@ -52,7 +52,7 @@ flutter-ai-coding-kit/
 | Patrol UI 自动化 | 🚧 | 端到端测试流程 |
 | Flavor 多环境配置 | 🚧 | dev/staging/prod 环境隔离 |
 | 性能 Timeline 分析 | 🚧 | AI 辅助解读性能数据 |
-| Semantics 无障碍 | 🚧 | 可访问性标签与测试 |
+| [Semantics 无障碍](workflows/semantics-accessibility.md) | ✅ | 可访问性标签与测试 |
 
 ---
 

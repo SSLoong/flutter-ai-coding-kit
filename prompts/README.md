@@ -10,6 +10,11 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### Accessibility（无障碍）
+
+- [add-semantics-labels.md](accessibility/add-semantics-labels.md) — 补充 Semantics 语义标签
+- [generate-semantics-test.md](accessibility/generate-semantics-test.md) — 生成语义自动化测试
+
 ---
 
 ## 🎯 使用方法

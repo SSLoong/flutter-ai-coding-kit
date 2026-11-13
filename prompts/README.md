@@ -10,6 +10,10 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### Theming（主题）
+- [audit-hardcoded-styles.md](theming/audit-hardcoded-styles.md) — 审计硬编码颜色、字体、间距
+- [implement-theme-system.md](theming/implement-theme-system.md) — 落地 Material 3 主题体系与明暗色支持
+
 ---
 
 ## 🎯 使用方法

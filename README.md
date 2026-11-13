@@ -46,6 +46,7 @@ flutter-ai-coding-kit/
 | 工作流 | 状态 | 说明 |
 |--------|------|------|
 | [Widget 测试生成](workflows/widget-test-generation.md) | ✅ | 用 AI 为业务组件自动生成测试用例 |
+| [主题与 UI 一致性](workflows/theme-consistency.md) | ✅ | Material 3 主题迁移与明暗色支持 |
 | Riverpod 状态重构 | 🚧 | 从 setState 迁移到 Riverpod |
 | go_router 导航改造 | 🚧 | 类型安全路由 + AI 辅助迁移 |
 | Golden 测试实践 | 🚧 | UI 快照测试与多尺寸验证 |

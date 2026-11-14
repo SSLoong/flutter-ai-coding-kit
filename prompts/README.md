@@ -10,6 +10,10 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### L10n（国际化）
+- [extract-hardcoded-strings.md](l10n/extract-hardcoded-strings.md) — 审计项目中的硬编码字符串
+- [setup-gen-l10n.md](l10n/setup-gen-l10n.md) — 配置官方 gen-l10n 工具链
+
 ---
 
 ## 🎯 使用方法

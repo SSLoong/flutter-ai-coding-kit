@@ -10,6 +10,10 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### Codegen（代码生成）
+- [generate-freezed-model.md](codegen/generate-freezed-model.md) — 生成 freezed 数据模型
+- [fix-build-runner-errors.md](codegen/fix-build-runner-errors.md) — 修复 build_runner 生成错误
+
 ---
 
 ## 🎯 使用方法

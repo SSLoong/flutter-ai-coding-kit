@@ -9,6 +9,7 @@
 这是一个收集 Flutter/Dart 开发中与 AI（Cursor、Claude、GPT）协作的实战工作流、提示词模板和最佳实践的开源仓库。目标是让你用 AI 更高效、更可靠地完成：
 
 - 📝 Widget 测试与单元测试生成
+- 🔧 数据模型与代码生成（freezed、json_serializable）
 - 🏗️ 状态管理重构（Riverpod、Bloc）
 - 🧭 路由与导航优化
 - 🎨 主题与 UI 一致性
@@ -46,6 +47,7 @@ flutter-ai-coding-kit/
 | 工作流 | 状态 | 说明 |
 |--------|------|------|
 | [Widget 测试生成](workflows/widget-test-generation.md) | ✅ | 用 AI 为业务组件自动生成测试用例 |
+| [freezed 数据模型与代码生成](workflows/freezed-codegen.md) | ✅ | 不可变模型 + JSON 序列化代码生成 |
 | Riverpod 状态重构 | 🚧 | 从 setState 迁移到 Riverpod |
 | go_router 导航改造 | 🚧 | 类型安全路由 + AI 辅助迁移 |
 | Golden 测试实践 | 🚧 | UI 快照测试与多尺寸验证 |

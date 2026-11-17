@@ -10,6 +10,10 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### Database（数据库）
+- [generate-drift-schema.md](database/generate-drift-schema.md) — 生成 Drift 表结构与 DAO
+- [add-drift-migration.md](database/add-drift-migration.md) — 添加 Schema 迁移脚本
+
 ---
 
 ## 🎯 使用方法

@@ -12,6 +12,7 @@
 - 🏗️ 状态管理重构（Riverpod、Bloc）
 - 🧭 路由与导航优化
 - 🎨 主题与 UI 一致性
+- 🗄️ 本地持久化与数据库迁移
 - ⚡ 性能分析与优化
 - ♿ 无障碍适配
 
@@ -46,6 +47,7 @@ flutter-ai-coding-kit/
 | 工作流 | 状态 | 说明 |
 |--------|------|------|
 | [Widget 测试生成](workflows/widget-test-generation.md) | ✅ | 用 AI 为业务组件自动生成测试用例 |
+| [Drift 本地数据库](workflows/drift-local-database.md) | ✅ | 类型安全的 SQLite 与 Schema 迁移 |
 | Riverpod 状态重构 | 🚧 | 从 setState 迁移到 Riverpod |
 | go_router 导航改造 | 🚧 | 类型安全路由 + AI 辅助迁移 |
 | Golden 测试实践 | 🚧 | UI 快照测试与多尺寸验证 |

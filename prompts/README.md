@@ -12,6 +12,10 @@
 - [generate-golden-test.md](testing/generate-golden-test.md) — 生成 Golden（UI 快照）测试
 - [fix-golden-diff.md](testing/fix-golden-diff.md) — 修复 Golden 测试快照差异
 
+### State（状态管理）
+- [refactor-to-riverpod.md](state/refactor-to-riverpod.md) — 将现有代码重构到 Riverpod
+- [generate-riverpod-provider.md](state/generate-riverpod-provider.md) — 为新功能生成 Riverpod Provider
+
 ---
 
 ## 🎯 使用方法

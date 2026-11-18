@@ -46,6 +46,7 @@ flutter-ai-coding-kit/
 | 工作流 | 状态 | 说明 |
 |--------|------|------|
 | [Widget 测试生成](workflows/widget-test-generation.md) | ✅ | 用 AI 为业务组件自动生成测试用例 |
+| [get_it + injectable 依赖注入](workflows/get-it-injectable-di.md) | ✅ | 服务层解耦与依赖注入架构 |
 | Riverpod 状态重构 | 🚧 | 从 setState 迁移到 Riverpod |
 | go_router 导航改造 | 🚧 | 类型安全路由 + AI 辅助迁移 |
 | Golden 测试实践 | 🚧 | UI 快照测试与多尺寸验证 |

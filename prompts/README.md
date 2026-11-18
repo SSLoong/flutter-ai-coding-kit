@@ -10,6 +10,10 @@
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 
+### DI（依赖注入）
+- [setup-get-it-injectable.md](di/setup-get-it-injectable.md) — 搭建 get_it + injectable 架构
+- [register-or-fix-injectable.md](di/register-or-fix-injectable.md) — 注册新服务或修复 injectable 错误
+
 ---
 
 ## 🎯 使用方法

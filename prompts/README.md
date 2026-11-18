@@ -9,6 +9,8 @@
 ### Testing（测试）
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
+- [generate-golden-test.md](testing/generate-golden-test.md) — 生成 Golden（UI 快照）测试
+- [fix-golden-diff.md](testing/fix-golden-diff.md) — 修复 Golden 测试快照差异
 
 ---
 

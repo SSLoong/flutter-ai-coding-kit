@@ -57,6 +57,12 @@
 - [setup-gen-l10n.md](l10n/setup-gen-l10n.md) — 配置官方 gen-l10n 工具链
 ---
 
+### Networking（网络）
+
+- [generate-dio-client.md](networking/generate-dio-client.md) — 生成 Dio API 客户端
+- [unify-api-error-handling.md](networking/unify-api-error-handling.md) — 统一 API 错误处理
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

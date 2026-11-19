@@ -39,6 +39,12 @@
 - [fix-jank-from-timeline.md](performance/fix-jank-from-timeline.md) — 修复 Timeline 诊断出的卡顿问题
 ---
 
+### Accessibility（无障碍）
+
+- [add-semantics-labels.md](accessibility/add-semantics-labels.md) — 补充 Semantics 语义标签
+- [generate-semantics-test.md](accessibility/generate-semantics-test.md) — 生成语义自动化测试
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

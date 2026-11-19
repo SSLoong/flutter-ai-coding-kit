@@ -51,6 +51,12 @@
 - [implement-theme-system.md](theming/implement-theme-system.md) — 落地 Material 3 主题体系与明暗色支持
 ---
 
+### L10n（国际化）
+
+- [extract-hardcoded-strings.md](l10n/extract-hardcoded-strings.md) — 审计项目中的硬编码字符串
+- [setup-gen-l10n.md](l10n/setup-gen-l10n.md) — 配置官方 gen-l10n 工具链
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

@@ -54,6 +54,7 @@ flutter-ai-coding-kit/
 | [性能 Timeline 分析](workflows/performance-timeline.md) | ✅ | AI 辅助解读 DevTools Performance 数据 |
 | [Semantics 无障碍](workflows/semantics-accessibility.md) | ✅ | 可访问性标签与测试 |
 | [主题与 UI 一致性](workflows/theme-consistency.md) | ✅ | Material 3 主题迁移与明暗色支持 |
+| [L10n 国际化](workflows/l10n-internationalization.md) | ✅ | 用 AI 走完官方 gen-l10n / ARB 国际化路径 |
 
 ---
 

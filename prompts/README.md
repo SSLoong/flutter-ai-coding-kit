@@ -45,6 +45,12 @@
 - [generate-semantics-test.md](accessibility/generate-semantics-test.md) — 生成语义自动化测试
 ---
 
+### Theming（主题）
+
+- [audit-hardcoded-styles.md](theming/audit-hardcoded-styles.md) — 审计硬编码颜色、字体、间距
+- [implement-theme-system.md](theming/implement-theme-system.md) — 落地 Material 3 主题体系与明暗色支持
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

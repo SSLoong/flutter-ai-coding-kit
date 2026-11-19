@@ -53,6 +53,7 @@ flutter-ai-coding-kit/
 | [Flavor 多环境配置](workflows/flavor-multi-env.md) | ✅ | dev/staging/prod 环境隔离 |
 | [性能 Timeline 分析](workflows/performance-timeline.md) | ✅ | AI 辅助解读 DevTools Performance 数据 |
 | [Semantics 无障碍](workflows/semantics-accessibility.md) | ✅ | 可访问性标签与测试 |
+| [主题与 UI 一致性](workflows/theme-consistency.md) | ✅ | Material 3 主题迁移与明暗色支持 |
 
 ---
 

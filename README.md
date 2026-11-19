@@ -53,6 +53,7 @@ flutter-ai-coding-kit/
 | Flavor 多环境配置 | 🚧 | dev/staging/prod 环境隔离 |
 | 性能 Timeline 分析 | 🚧 | AI 辅助解读性能数据 |
 | Semantics 无障碍 | 🚧 | 可访问性标签与测试 |
+| [Pigeon 类型安全平台通道](workflows/pigeon-platform-channels.md) | ✅ | 用 Pigeon 生成 HostApi / FlutterApi，并在 Dart 侧 mock 验证 |
 
 ---
 

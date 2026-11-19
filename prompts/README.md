@@ -16,6 +16,10 @@
 - [refactor-to-riverpod.md](state/refactor-to-riverpod.md) — 将现有代码重构到 Riverpod
 - [generate-riverpod-provider.md](state/generate-riverpod-provider.md) — 为新功能生成 Riverpod Provider
 
+### Platform（平台通道）
+- [define-pigeon-api.md](platform/define-pigeon-api.md) — 从业务需求生成 Pigeon API 定义与生成配置
+- [implement-and-fix-pigeon.md](platform/implement-and-fix-pigeon.md) — 在 Android/iOS 实现 HostApi、接入 FlutterApi，或根据生成/编译报错修复
+
 ---
 
 ## 🎯 使用方法

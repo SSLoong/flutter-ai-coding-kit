@@ -7,12 +7,17 @@
 ## 📂 目录
 
 ### Testing（测试）
+
 - [generate-widget-test.md](testing/generate-widget-test.md) — 生成 Widget 测试用例
 - [fix-flaky-widget-test.md](testing/fix-flaky-widget-test.md) — 修复不稳定测试
 - [generate-golden-test.md](testing/generate-golden-test.md) — 生成 Golden（UI 快照）测试
 - [fix-golden-diff.md](testing/fix-golden-diff.md) — 修复 Golden 测试快照差异
+- [generate-patrol-test.md](testing/generate-patrol-test.md) — 生成 Patrol 端到端测试
+- [fix-patrol-flaky.md](testing/fix-patrol-flaky.md) — 修复不稳定的 Patrol 测试
+---
 
 ### State（状态管理）
+
 - [refactor-to-riverpod.md](state/refactor-to-riverpod.md) — 将现有代码重构到 Riverpod
 - [generate-riverpod-provider.md](state/generate-riverpod-provider.md) — 为新功能生成 Riverpod Provider
 
@@ -20,7 +25,6 @@
 
 - [migrate-to-gorouter.md](navigation/migrate-to-gorouter.md) — 迁移到 go_router
 - [add-typed-route-and-features.md](navigation/add-typed-route-and-features.md) — 添加类型安全路由与功能
-
 ---
 
 ## 🎯 使用方法

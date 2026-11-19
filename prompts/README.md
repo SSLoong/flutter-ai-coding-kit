@@ -27,6 +27,12 @@
 - [add-typed-route-and-features.md](navigation/add-typed-route-and-features.md) — 添加类型安全路由与功能
 ---
 
+### Flavor（多环境配置）
+
+- [generate-flavor-config.md](flavor/generate-flavor-config.md) — 从零生成 Flavor 配置
+- [debug-flavor-build-error.md](flavor/debug-flavor-build-error.md) — 排查 Flavor 构建错误
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

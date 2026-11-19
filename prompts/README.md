@@ -69,6 +69,12 @@
 - [fix-build-runner-errors.md](codegen/fix-build-runner-errors.md) — 修复 build_runner 生成错误
 ---
 
+### Database（数据库）
+
+- [generate-drift-schema.md](database/generate-drift-schema.md) — 生成 Drift 表结构与 DAO
+- [add-drift-migration.md](database/add-drift-migration.md) — 添加 Schema 迁移脚本
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

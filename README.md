@@ -57,6 +57,7 @@ flutter-ai-coding-kit/
 | [L10n 国际化](workflows/l10n-internationalization.md) | ✅ | 用 AI 走完官方 gen-l10n / ARB 国际化路径 |
 | [Dio 网络层与统一错误处理](workflows/dio-network-layer.md) | ✅ | 用 AI 搭建可维护的 Dio 网络层 |
 | [freezed 数据模型与代码生成](workflows/freezed-codegen.md) | ✅ | 不可变模型 + JSON 序列化代码生成 |
+| [Drift 本地数据库](workflows/drift-local-database.md) | ✅ | 类型安全的 SQLite 与 Schema 迁移 |
 
 ---
 

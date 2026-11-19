@@ -56,6 +56,7 @@ flutter-ai-coding-kit/
 | [主题与 UI 一致性](workflows/theme-consistency.md) | ✅ | Material 3 主题迁移与明暗色支持 |
 | [L10n 国际化](workflows/l10n-internationalization.md) | ✅ | 用 AI 走完官方 gen-l10n / ARB 国际化路径 |
 | [Dio 网络层与统一错误处理](workflows/dio-network-layer.md) | ✅ | 用 AI 搭建可维护的 Dio 网络层 |
+| [freezed 数据模型与代码生成](workflows/freezed-codegen.md) | ✅ | 不可变模型 + JSON 序列化代码生成 |
 
 ---
 

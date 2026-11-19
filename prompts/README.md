@@ -63,6 +63,12 @@
 - [unify-api-error-handling.md](networking/unify-api-error-handling.md) — 统一 API 错误处理
 ---
 
+### Codegen（代码生成）
+
+- [generate-freezed-model.md](codegen/generate-freezed-model.md) — 生成 freezed 数据模型
+- [fix-build-runner-errors.md](codegen/fix-build-runner-errors.md) — 修复 build_runner 生成错误
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

@@ -16,6 +16,11 @@
 - [refactor-to-riverpod.md](state/refactor-to-riverpod.md) — 将现有代码重构到 Riverpod
 - [generate-riverpod-provider.md](state/generate-riverpod-provider.md) — 为新功能生成 Riverpod Provider
 
+### Navigation（路由）
+
+- [migrate-to-gorouter.md](navigation/migrate-to-gorouter.md) — 迁移到 go_router
+- [add-typed-route-and-features.md](navigation/add-typed-route-and-features.md) — 添加类型安全路由与功能
+
 ---
 
 ## 🎯 使用方法

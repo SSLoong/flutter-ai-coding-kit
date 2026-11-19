@@ -51,7 +51,7 @@ flutter-ai-coding-kit/
 | [Golden 测试实践](workflows/golden-test-practice.md) | ✅ | UI 快照测试与多尺寸验证 |
 | [Patrol UI 自动化](workflows/patrol-ui-automation.md) | ✅ | 端到端测试流程 + 原生交互 |
 | [Flavor 多环境配置](workflows/flavor-multi-env.md) | ✅ | dev/staging/prod 环境隔离 |
-| 性能 Timeline 分析 | 🚧 | AI 辅助解读性能数据 |
+| [性能 Timeline 分析](workflows/performance-timeline.md) | ✅ | AI 辅助解读 DevTools Performance 数据 |
 | Semantics 无障碍 | 🚧 | 可访问性标签与测试 |
 
 ---

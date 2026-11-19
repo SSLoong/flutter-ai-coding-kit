@@ -33,6 +33,12 @@
 - [debug-flavor-build-error.md](flavor/debug-flavor-build-error.md) — 排查 Flavor 构建错误
 ---
 
+### Performance（性能）
+
+- [interpret-timeline.md](performance/interpret-timeline.md) — 解读 DevTools Timeline 性能数据
+- [fix-jank-from-timeline.md](performance/fix-jank-from-timeline.md) — 修复 Timeline 诊断出的卡顿问题
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

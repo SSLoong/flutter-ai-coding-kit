@@ -75,6 +75,12 @@
 - [add-drift-migration.md](database/add-drift-migration.md) — 添加 Schema 迁移脚本
 ---
 
+### DI（依赖注入）
+
+- [setup-get-it-injectable.md](di/setup-get-it-injectable.md) — 搭建 get_it + injectable 架构
+- [register-or-fix-injectable.md](di/register-or-fix-injectable.md) — 注册新服务或修复 injectable 错误
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

@@ -58,6 +58,7 @@ flutter-ai-coding-kit/
 | [Dio 网络层与统一错误处理](workflows/dio-network-layer.md) | ✅ | 用 AI 搭建可维护的 Dio 网络层 |
 | [freezed 数据模型与代码生成](workflows/freezed-codegen.md) | ✅ | 不可变模型 + JSON 序列化代码生成 |
 | [Drift 本地数据库](workflows/drift-local-database.md) | ✅ | 类型安全的 SQLite 与 Schema 迁移 |
+| [get_it + injectable 依赖注入](workflows/get-it-injectable-di.md) | ✅ | 服务层解耦与依赖注入架构 |
 
 ---
 

@@ -47,12 +47,19 @@ flutter-ai-coding-kit/
 |--------|------|------|
 | [Widget 测试生成](workflows/widget-test-generation.md) | ✅ | 用 AI 为业务组件自动生成测试用例 |
 | [Riverpod 状态重构](workflows/riverpod-state-refactor.md) | ✅ | 从 setState 迁移到 Riverpod |
-| go_router 导航改造 | 🚧 | 类型安全路由 + AI 辅助迁移 |
+| [go_router 导航改造](workflows/gorouter-navigation.md) | ✅ | 类型安全路由 + AI 辅助迁移 |
 | [Golden 测试实践](workflows/golden-test-practice.md) | ✅ | UI 快照测试与多尺寸验证 |
-| Patrol UI 自动化 | 🚧 | 端到端测试流程 |
-| Flavor 多环境配置 | 🚧 | dev/staging/prod 环境隔离 |
-| 性能 Timeline 分析 | 🚧 | AI 辅助解读性能数据 |
-| Semantics 无障碍 | 🚧 | 可访问性标签与测试 |
+| [Patrol UI 自动化](workflows/patrol-ui-automation.md) | ✅ | 端到端测试流程 + 原生交互 |
+| [Flavor 多环境配置](workflows/flavor-multi-env.md) | ✅ | dev/staging/prod 环境隔离 |
+| [性能 Timeline 分析](workflows/performance-timeline.md) | ✅ | AI 辅助解读 DevTools Performance 数据 |
+| [Semantics 无障碍](workflows/semantics-accessibility.md) | ✅ | 可访问性标签与测试 |
+| [主题与 UI 一致性](workflows/theme-consistency.md) | ✅ | Material 3 主题迁移与明暗色支持 |
+| [L10n 国际化](workflows/l10n-internationalization.md) | ✅ | 用 AI 走完官方 gen-l10n / ARB 国际化路径 |
+| [Dio 网络层与统一错误处理](workflows/dio-network-layer.md) | ✅ | 用 AI 搭建可维护的 Dio 网络层 |
+| [freezed 数据模型与代码生成](workflows/freezed-codegen.md) | ✅ | 不可变模型 + JSON 序列化代码生成 |
+| [Drift 本地数据库](workflows/drift-local-database.md) | ✅ | 类型安全的 SQLite 与 Schema 迁移 |
+| [get_it + injectable 依赖注入](workflows/get-it-injectable-di.md) | ✅ | 服务层解耦与依赖注入架构 |
+| [Isolate 与后台计算](workflows/isolate-background-compute.md) | ✅ | 把耗时任务移出 UI isolate，保持流畅 |
 | [Pigeon 类型安全平台通道](workflows/pigeon-platform-channels.md) | ✅ | 用 Pigeon 生成 HostApi / FlutterApi，并在 Dart 侧 mock 验证 |
 
 ---

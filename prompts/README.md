@@ -81,6 +81,12 @@
 - [register-or-fix-injectable.md](di/register-or-fix-injectable.md) — 注册新服务或修复 injectable 错误
 ---
 
+### Concurrency（并发与 isolate）
+
+- [extract-work-to-isolate.md](concurrency/extract-work-to-isolate.md) — 从现有代码提取耗时任务到 isolate
+- [fix-isolate-errors.md](concurrency/fix-isolate-errors.md) — 修复 isolate 相关报错
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

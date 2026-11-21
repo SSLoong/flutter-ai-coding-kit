@@ -95,6 +95,12 @@
 - [implement-and-fix-pigeon.md](platform/implement-and-fix-pigeon.md) — 在 Android/iOS 实现 HostApi、接入 FlutterApi，或根据生成/编译报错修复
 ---
 
+### Interop（直接原生互操作）
+
+- [generate-native-bindings.md](interop/generate-native-bindings.md) — 从已有 C/ObjC 头或 Java/Kotlin API 生成 FFIgen 或 JNIgen 配置与绑定
+- [wrap-and-fix-native-bindings.md](interop/wrap-and-fix-native-bindings.md) — 把生成绑定包成惯用 Dart API，或根据生成/编译/内存/线程报错修复
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

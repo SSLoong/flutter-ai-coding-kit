@@ -43,7 +43,7 @@ AI 适合起草定义和宿主实现，但生成物必须在本地重新生成�
 
 - **Pigeon 平台通道（本文）**：应用或插件里新的一组调用。数据是枚举、数据类、`List` / `Map`、可空字段，调用频率是用户操作或偶发系统查询。Android 用 Kotlin，iOS 用 Swift。窗口、桌面如果只要 Windows / Linux，同一份定义还可以生成 C++ / GObject；本文示例只写 Android 与 iOS。
 - **手写 MethodChannel / EventChannel**：对方已经规定 channel 名、方法名和 codec（旧原生模块、第三方容器），或者方法名要到运行时才知道。Pigeon 的 channel 名固定为 `dev.flutter.pigeon.<dartPackageName>.<Api>.<method>`，并且使用 `StandardMessageCodec`。
-- **FFI（`dart:ffi`、FFIgen、JNIgen）**：要绑定已经存在的 C / Objective-C / Java / Kotlin API，或在调用线程上同步访问原生内存。FFIgen（含 Objective-C）和 JNIgen 已稳定；它们生成的是某一侧原生 API 的绑定，不是一份跨平台契约。见 [FFIgen](https://docs.flutter.dev/interop/ffigen) 与 [JNIgen](https://docs.flutter.dev/interop/jnigen)。
+- **FFI（`dart:ffi`、FFIgen、JNIgen）**：要绑定已经存在的 C / Objective-C / Java / Kotlin API，或在调用线程上同步访问原生内存。FFIgen（含 Objective-C）和 JNIgen 已稳定；它们生成的是某一侧原生 API 的绑定，不是一份跨平台契约。见 [FFIgen / JNIgen 直接原生互操作工作流](ffigen-jnigen-native-interop.md)、[FFIgen 官方文档](https://docs.flutter.dev/interop/ffigen)与 [JNIgen 官方文档](https://docs.flutter.dev/interop/jnigen)。
 - **Pigeon Native Interop（`useJni` / `useFfi`）**：官方文档和 2026-11-12 的 Flutter 博客仍把它标为 preview，不作为默认。它不支持 `@TaskQueue`；多 Engine 路由在 Flutter 3.50 之前还有已知限制。需要同步、高频或后台 isolate 直调宿主时，先读 [native_interop_guide.md](https://github.com/flutter/packages/blob/main/packages/pigeon/native_interop_guide.md)，单独验证，不要和本文的 `setUp(binaryMessenger, api)` 混用。
 
 ---

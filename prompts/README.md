@@ -95,6 +95,12 @@
 - [implement-and-fix-pigeon.md](platform/implement-and-fix-pigeon.md) — 在 Android/iOS 实现 HostApi、接入 FlutterApi，或根据生成/编译报错修复
 ---
 
+### Code Push（OTA 补丁与热更新）
+
+- [audit-patchable-change.md](code-push/audit-patchable-change.md) — 根据 git diff 判断变更是否可用 Shorebird patch，或需发新 release
+- [setup-release-and-patch.md](code-push/setup-release-and-patch.md) — 从 shorebird init、签名选择、release、patch 到 track 放量的完整操作
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

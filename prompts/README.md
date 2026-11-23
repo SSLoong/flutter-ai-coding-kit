@@ -95,6 +95,12 @@
 - [implement-and-fix-pigeon.md](platform/implement-and-fix-pigeon.md) — 在 Android/iOS 实现 HostApi、接入 FlutterApi，或根据生成/编译报错修复
 ---
 
+### AI Tooling（AI 工具链）
+
+- [setup-official-flutter-ai-plugin.md](ai-tooling/setup-official-flutter-ai-plugin.md) — 在编辑器中安装官方 Flutter AI 插件、配置 MCP、下载 rules、与项目模板并存
+- [install-or-ship-package-skills.md](ai-tooling/install-or-ship-package-skills.md) — 从依赖安装 package skills，或为自己的包编写并校验 skills
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

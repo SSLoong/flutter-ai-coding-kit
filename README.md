@@ -61,6 +61,7 @@ flutter-ai-coding-kit/
 | [get_it + injectable 依赖注入](workflows/get-it-injectable-di.md) | ✅ | 服务层解耦与依赖注入架构 |
 | [Isolate 与后台计算](workflows/isolate-background-compute.md) | ✅ | 把耗时任务移出 UI isolate，保持流畅 |
 | [Pigeon 类型安全平台通道](workflows/pigeon-platform-channels.md) | ✅ | 用 Pigeon 生成 HostApi / FlutterApi，并在 Dart 侧 mock 验证 |
+| [Flutter Widget Previewer](workflows/flutter-widget-previewer.md) | ✅ | 用 @Preview 注解在预览器中实时查看组件，快速迭代设计变体 |
 
 ---
 

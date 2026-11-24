@@ -95,6 +95,12 @@
 - [implement-and-fix-pigeon.md](platform/implement-and-fix-pigeon.md) — 在 Android/iOS 实现 HostApi、接入 FlutterApi，或根据生成/编译报错修复
 ---
 
+### Preview（Widget 预览器）
+
+- [generate-widget-preview.md](preview/generate-widget-preview.md) — 生成 @Preview 注解，在预览器中实时查看组件
+- [customize-preview.md](preview/customize-preview.md) — 定制 wrapper / theme / 自定义注解，排查预览器加载失败
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

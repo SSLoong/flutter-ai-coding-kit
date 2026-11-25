@@ -95,6 +95,12 @@
 - [implement-and-fix-pigeon.md](platform/implement-and-fix-pigeon.md) — 在 Android/iOS 实现 HostApi、接入 FlutterApi，或根据生成/编译报错修复
 ---
 
+### Web（Web 平台）
+
+- [audit-wasm-and-js-interop.md](web/audit-wasm-and-js-interop.md) — 审计 Wasm 兼容性与遗留 JS interop，判断能否上 Wasm
+- [setup-wasm-build-and-cache.md](web/setup-wasm-build-and-cache.md) — 配置 Wasm 构建、内容哈希缓存头与 Service Worker
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

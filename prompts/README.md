@@ -95,6 +95,12 @@
 - [implement-and-fix-pigeon.md](platform/implement-and-fix-pigeon.md) — 在 Android/iOS 实现 HostApi、接入 FlutterApi，或根据生成/编译报错修复
 ---
 
+### SDK（SDK 版本升级）
+
+- [preview-dart-migrate.md](sdk/preview-dart-migrate.md) — 预览 dart migrate 变更，审查 prepare/bump/cleanup 步骤
+- [apply-and-verify-dart-migrate.md](sdk/apply-and-verify-dart-migrate.md) — 安全应用迁移并用分析、测试、构建验证
+---
+
 ## 🎯 使用方法
 
 1. **选择场景**：找到匹配你需求的提示词文件

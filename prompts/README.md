@@ -53,6 +53,12 @@
 - [implement-theme-system.md](theming/implement-theme-system.md) — 落地 Material 3 主题体系与明暗色支持
 ---
 
+### Design System（设计系统）
+
+- [audit-and-preview-material-ui-migration.md](design-system/audit-and-preview-material-ui-migration.md) — 审计依赖与预览 material_ui / cupertino_ui 迁移
+- [apply-material-ui-migration.md](design-system/apply-material-ui-migration.md) — 安全应用 material_ui / cupertino_ui 迁移并验证
+---
+
 ### L10n（国际化）
 
 - [extract-hardcoded-strings.md](l10n/extract-hardcoded-strings.md) — 审计项目中的硬编码字符串

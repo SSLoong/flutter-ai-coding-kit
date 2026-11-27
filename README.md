@@ -54,6 +54,7 @@ flutter-ai-coding-kit/
 | [性能 Timeline 分析](workflows/performance-timeline.md) | ✅ | AI 辅助解读 DevTools Performance 数据 |
 | [Semantics 无障碍](workflows/semantics-accessibility.md) | ✅ | 可访问性标签与测试 |
 | [主题与 UI 一致性](workflows/theme-consistency.md) | ✅ | Material 3 主题迁移与明暗色支持 |
+| [material_ui / cupertino_ui 独立包迁移](workflows/material-cupertino-ui-packages.md) | ✅ | 从框架内设计库迁移到独立发布的组件包(Flutter 3.50 官方 breaking change) |
 | [L10n 国际化](workflows/l10n-internationalization.md) | ✅ | 用 AI 走完官方 gen-l10n / ARB 国际化路径 |
 | [Dio 网络层与统一错误处理](workflows/dio-network-layer.md) | ✅ | 用 AI 搭建可维护的 Dio 网络层 |
 | [freezed 数据模型与代码生成](workflows/freezed-codegen.md) | ✅ | 不可变模型 + JSON 序列化代码生成 |

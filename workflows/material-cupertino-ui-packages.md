@@ -386,57 +386,21 @@ CupertinoApp(
 
 #### 场景 B:使用 gen-l10n
 
-**Flutter 3.50 官方已修复**:PR #194500 已合并到 stable,`flutter gen-l10n` 生成的 `app_localizations.dart` 会自动检测 `pubspec.yaml` 中的 material_ui/cupertino_ui 依赖,生成正确的导入和 delegates。
+以项目锁定的 Flutter SDK 运行 `flutter gen-l10n`，不要只看版本号。Flutter **3.50.0 和 3.50.1** 仍可能生成旧的 `flutter_localizations` 导入和 delegates。其他版本也以实际生成的文件为准。
 
-**修改前**(Flutter < 3.50 或未更新 gen-l10n):
-```dart
-// ❌ 生成的 app_localizations.dart 仍导入旧 flutter_localizations
-import 'package:flutter_localizations/flutter_localizations.dart';
+在 `l10n.yaml` 中查找 `output-dir`；未设置时用 `arb-dir`。文件名以 `output-localization-file` 为准，默认是 `app_localizations.dart`。从生成到 `lib/` 下的实际源码路径导入。
 
-static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = [
-  delegate,
-  GlobalMaterialLocalizations.delegate, // 旧 delegate
-  GlobalCupertinoLocalizations.delegate,
-  GlobalWidgetsLocalizations.delegate,
-];
-```
+- **已生成与入口匹配的独立包 delegates**：可以直接用 `AppLocalizations.localizationsDelegates`，并保留项目已有的自定义 delegates。
+- **仍生成旧 delegates，或生成的列表不匹配入口**：不要手改生成文件，也不要直接使用旧列表。在应用入口组合 `AppLocalizations.delegate` 和独立包 delegates。只要生成文件还导入 `flutter_localizations`，就保留 `pubspec.yaml` 中的 SDK 依赖，即使入口不再导入它。
 
-**修改后**(Flutter 3.50+ 重新生成):
-```dart
-// ✅ 自动使用新包
-import 'package:material_ui/material_ui.dart' show GlobalMaterialLocalizations;
-
-static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = [
-  delegate,
-  ...GlobalMaterialLocalizations.delegates, // 新 delegates
-];
-```
-
-**操作步骤**:
-
-```bash
-# 1. 确保 pubspec.yaml 包含 material_ui/cupertino_ui 依赖
-
-# 2. 重新生成本地化代码
-flutter gen-l10n
-
-# 3. 检查生成的 app_localizations.dart
-cat .dart_tool/flutter_gen/gen_l10n/app_localizations.dart | head -20
-
-# 4. 验证 delegates 是否正确
-# 应该看到 GlobalMaterialLocalizations.delegates 而非旧的单独 delegates
-```
-
-**若仍生成旧代码**(Flutter < 3.50 或工具链未更新):
-
-临时 workaround(在 MaterialApp 中手动组合):
+示例：应用入口在 `lib/main.dart`，本地化文件生成到 `lib/l10n/app_localizations.dart`。
 
 ```dart
 import 'package:material_ui/material_ui.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'l10n/app_localizations.dart';
 
 MaterialApp(
-  // ✅ 临时方案:手动组合
   localizationsDelegates: const [
     AppLocalizations.delegate,
     ...GlobalMaterialLocalizations.delegates,
@@ -446,19 +410,12 @@ MaterialApp(
 );
 ```
 
-并在 `l10n.yaml` 中添加 header 忽略生成文件的 deprecated 警告:
-
-```yaml
-header: '// ignore_for_file: deprecated_member_use'
-```
-
-**升级到 Flutter 3.50+ 后删除此 header**。
+纯 Cupertino 入口且不使用 Material 组件时，从 `cupertino_ui` 导入并改用 `GlobalCupertinoLocalizations.delegates`；Cupertino 入口混用新 Material 组件时，仍用 `material_ui` 的 `GlobalMaterialLocalizations.delegates`。如果项目有额外的 delegates，保留它们。
 
 **检查点**:
-- [ ] `flutter gen-l10n` 无报错
-- [ ] 生成的 `app_localizations.dart` 使用正确的导入(material_ui 而非 flutter_localizations)
-- [ ] MaterialApp / CupertinoApp 中 localizationsDelegates 配置正确
-- [ ] 应用在英语和非英语 locale 下均可启动,无 "No MaterialLocalizations found" 错误
+- [ ] 使用项目锁定的 SDK 运行 `flutter gen-l10n` 和 `flutter analyze`，确认生成文件、导入路径及入口 delegates 正确。
+- [ ] 用项目已支持的一种非英文语言（如 `zh`）运行应用：核对一条 App 自有译文，再打开独立包的日期选择器，确认可打开且控件文本也使用目标语言，而不是回退到英文。纯 Cupertino 应用检查 `CupertinoDatePicker` 的日期格式与文案；混用 Material 的入口也要测 Material 日期选择器。
+- [ ] 记录 Flutter 版本、语言和实测结果；没跑过界面就写“未验证”，不要按生成成功或英文页面正常判定通过。
 
 ---
 
@@ -753,20 +710,7 @@ CupertinoApp(
 
 ### Q5: gen-l10n 生成的代码仍导入 flutter_localizations 怎么办?
 
-**A**: 分情况处理:
-
-**情况 1: Flutter 3.50+ 但工具链未更新**
-- 确认 Flutter 版本:`flutter --version`(需 3.50.0 或更高)
-- 升级 Flutter:`flutter upgrade`
-- 清理缓存:`flutter clean && flutter pub get`
-- 重新生成:`flutter gen-l10n`
-
-**情况 2: Flutter < 3.50(PR #194500 未包含)**
-- 使用临时 workaround(Step 6 场景 B 中说明)
-- 计划升级到 3.50+
-
-**情况 3: 自定义 gen-l10n 模板**
-- 若项目覆盖了默认模板,需手动更新模板导入路径
+**A**: 先确认命令用的是项目锁定的 SDK，也确认 `pubspec.yaml` 声明了实际使用的独立包。如果重新生成后仍是旧导入（例如 Flutter 3.50.0 和 3.50.1），按 Step 6 场景 B 在应用入口手动组合 delegates，不必为此升级 SDK。未来如果升级了项目 SDK，先检查重新生成的结果，再决定是否移除手动配置。
 
 ---
 
@@ -983,6 +927,7 @@ Flutter 3.50+ 新建项目默认已用 material_ui。若手动创建项目或使
 - **相关 Issues & PRs**:
   - [Issue 191072 - gen-l10n support](https://github.com/flutter/flutter/issues/191072)
   - [PR 194500 - gen-l10n standalone UI packages support](https://github.com/flutter/flutter/pull/194500)
+  - [Flutter 官方文档：本地化代码生成到源码目录](https://docs.flutter.dev/release/breaking-changes/flutter-generate-i10n-source)
   - [Issue 191448 - Breaking change tracking](https://github.com/flutter/flutter/issues/191448)
 
 ---

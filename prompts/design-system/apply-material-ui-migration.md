@@ -255,45 +255,21 @@ MaterialApp(
 
 ### 场景 B:使用 gen-l10n
 
-**步骤 3B.1**:检查 Flutter 版本
+以项目锁定的 Flutter SDK 运行 `flutter gen-l10n`，不要只看版本号。Flutter **3.50.0 和 3.50.1** 仍可能生成旧的 `flutter_localizations` 导入和 delegates。其他版本也以实际生成的文件为准。
 
-```bash
-flutter --version
-```
+在 `l10n.yaml` 中查找 `output-dir`；未设置时用 `arb-dir`。文件名以 `output-localization-file` 为准，默认是 `app_localizations.dart`。从生成到 `lib/` 下的实际源码路径导入。
 
-若 Flutter >= 3.50.0,gen-l10n 已原生支持 material_ui/cupertino_ui。
+- **已生成与入口匹配的独立包 delegates**：可以直接用 `AppLocalizations.localizationsDelegates`，并保留项目已有的自定义 delegates。
+- **仍生成旧 delegates，或生成的列表不匹配入口**：不要手改生成文件，也不要直接使用旧列表。在应用入口组合 `AppLocalizations.delegate` 和独立包 delegates。只要生成文件还导入 `flutter_localizations`，就保留 `pubspec.yaml` 中的 SDK 依赖，即使入口不再导入它。
 
-**步骤 3B.2**:重新生成本地化代码
-
-```bash
-flutter gen-l10n
-```
-
-**步骤 3B.3**:检查生成的 app_localizations.dart
-
-查看 `.dart_tool/flutter_gen/gen_l10n/app_localizations.dart` 顶部的导入:
-
-**预期**(Flutter 3.50+):
-```dart
-import 'package:material_ui/material_ui.dart' show GlobalMaterialLocalizations;
-// 而非 package:flutter_localizations/flutter_localizations.dart
-
-static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = [
-  delegate,
-  ...GlobalMaterialLocalizations.delegates, // 新 delegates
-];
-```
-
-**若仍生成旧代码**(Flutter < 3.50 或工具链未更新):
-
-在 MaterialApp 中手动组合 delegates:
+示例：应用入口在 `lib/main.dart`，本地化文件生成到 `lib/l10n/app_localizations.dart`。
 
 ```dart
 import 'package:material_ui/material_ui.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'l10n/app_localizations.dart';
 
 MaterialApp(
-  // ✅ 手动组合(临时 workaround)
   localizationsDelegates: const [
     AppLocalizations.delegate,
     ...GlobalMaterialLocalizations.delegates,
@@ -303,20 +279,13 @@ MaterialApp(
 );
 ```
 
-并在 `l10n.yaml` 添加 header 忽略生成文件的 deprecated 警告:
+纯 Cupertino 入口且不使用 Material 组件时，从 `cupertino_ui` 导入并改用 `GlobalCupertinoLocalizations.delegates`；Cupertino 入口混用新 Material 组件时，仍用 `material_ui` 的 `GlobalMaterialLocalizations.delegates`。如果项目有额外的 delegates，保留它们。
 
-```yaml
-header: '// ignore_for_file: deprecated_member_use'
-```
+输出实际 Flutter 版本、生成文件路径、应用入口采用的 delegates 和验证结果。
 
-**升级到 Flutter 3.50+ 后务必删除此 header**。
-
-**步骤 3B.4**:生成本地化配置代码
-
-请生成修复后的 MaterialApp 本地化配置,包含:
-- 正确的 localizationsDelegates
-- supportedLocales 配置
-- 完整可运行的 MaterialApp 代码
+- [ ] 使用项目锁定的 SDK 运行 `flutter gen-l10n` 和 `flutter analyze`，确认生成文件、导入路径及入口 delegates 正确。
+- [ ] 用项目已支持的一种非英文语言（如 `zh`）运行应用：核对一条 App 自有译文，再打开独立包的日期选择器，确认可打开且控件文本也使用目标语言，而不是回退到英文。纯 Cupertino 应用检查 `CupertinoDatePicker` 的日期格式与文案；混用 Material 的入口也要测 Material 日期选择器。
+- [ ] 记录 Flutter 版本、语言和实测结果；没跑过界面就写“未验证”，不要按生成成功或英文页面正常判定通过。
 
 ---
 
@@ -516,7 +485,7 @@ flutter run --debug
 本地化:
 - [ ] 默认语言显示正确
 - [ ] 切换语言功能正常(若支持多语言)
-- [ ] 非英语 locale 无 "No MaterialLocalizations found" 错误
+- [ ] 非英文环境下，App 自有译文和独立包日期选择器均正确（见任务 3）
 
 第三方包功能:
 - [ ] 中/高风险依赖包的组件显示和交互正常
@@ -582,7 +551,7 @@ Flutter 版本:3.50.0
 
 **配置文件**:
 - pubspec.yaml:添加 material_ui 和 cupertino_ui 依赖
-- [若有] l10n.yaml:添加 header 忽略 deprecated 警告(临时)
+- [若有] l10n.yaml:记录本次实际调整和理由
 
 ---
 

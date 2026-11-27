@@ -103,6 +103,10 @@
 
 - [audit-patchable-change.md](code-push/audit-patchable-change.md) — 根据 git diff 判断变更是否可用 Shorebird patch，或需发新 release
 - [setup-release-and-patch.md](code-push/setup-release-and-patch.md) — 从 shorebird init、签名选择、release、patch 到 track 放量的完整操作
+### AI Tooling（AI 工具链）
+
+- [setup-official-flutter-ai-plugin.md](ai-tooling/setup-official-flutter-ai-plugin.md) — 在编辑器中安装官方 Flutter AI 插件、配置 MCP、下载 rules、与项目模板并存
+- [install-or-ship-package-skills.md](ai-tooling/install-or-ship-package-skills.md) — 从依赖安装 package skills，或为自己的包编写并校验 skills
 ---
 
 ## 🎯 使用方法

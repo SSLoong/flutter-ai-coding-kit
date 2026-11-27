@@ -63,6 +63,7 @@ flutter-ai-coding-kit/
 | [Pigeon 类型安全平台通道](workflows/pigeon-platform-channels.md) | ✅ | 用 Pigeon 生成 HostApi / FlutterApi，并在 Dart 侧 mock 验证 |
 | [FFIgen / JNIgen 直接原生互操作](workflows/ffigen-jnigen-native-interop.md) | ✅ | 从已有 C/Objective-C/Java/Kotlin API 生成 Dart 绑定，实现低延迟同步调用 |
 | [Shorebird Code Push / OTA 补丁](workflows/shorebird-code-push.md) | ✅ | 即时热修复与功能迭代，无需等待商店审核，支持分阶段放量 |
+| [官方 Flutter AI Agent 插件与 Package Skills](workflows/flutter-ai-agent-plugins.md) | ✅ | 安装官方插件、配置 MCP/Skills/Rules、与项目模板并存 |
 
 ---
 

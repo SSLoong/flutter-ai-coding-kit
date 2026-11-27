@@ -62,6 +62,7 @@ flutter-ai-coding-kit/
 | [Isolate 与后台计算](workflows/isolate-background-compute.md) | ✅ | 把耗时任务移出 UI isolate，保持流畅 |
 | [Pigeon 类型安全平台通道](workflows/pigeon-platform-channels.md) | ✅ | 用 Pigeon 生成 HostApi / FlutterApi，并在 Dart 侧 mock 验证 |
 | [FFIgen / JNIgen 直接原生互操作](workflows/ffigen-jnigen-native-interop.md) | ✅ | 从已有 C/Objective-C/Java/Kotlin API 生成 Dart 绑定，实现低延迟同步调用 |
+| [Shorebird Code Push / OTA 补丁](workflows/shorebird-code-push.md) | ✅ | 即时热修复与功能迭代，无需等待商店审核，支持分阶段放量 |
 
 ---
 

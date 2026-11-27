@@ -99,6 +99,10 @@
 
 - [generate-native-bindings.md](interop/generate-native-bindings.md) — 从已有 C/ObjC 头或 Java/Kotlin API 生成 FFIgen 或 JNIgen 配置与绑定
 - [wrap-and-fix-native-bindings.md](interop/wrap-and-fix-native-bindings.md) — 把生成绑定包成惯用 Dart API，或根据生成/编译/内存/线程报错修复
+### Code Push（OTA 补丁与热更新）
+
+- [audit-patchable-change.md](code-push/audit-patchable-change.md) — 根据 git diff 判断变更是否可用 Shorebird patch，或需发新 release
+- [setup-release-and-patch.md](code-push/setup-release-and-patch.md) — 从 shorebird init、签名选择、release、patch 到 track 放量的完整操作
 ---
 
 ## 🎯 使用方法

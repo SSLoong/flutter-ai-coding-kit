@@ -111,6 +111,10 @@
 
 - [generate-widget-preview.md](preview/generate-widget-preview.md) — 生成 @Preview 注解，在预览器中实时查看组件
 - [customize-preview.md](preview/customize-preview.md) — 定制 wrapper / theme / 自定义注解，排查预览器加载失败
+### Web（Web 平台）
+
+- [audit-wasm-and-js-interop.md](web/audit-wasm-and-js-interop.md) — 审计 Wasm 兼容性与遗留 JS interop，判断能否上 Wasm
+- [setup-wasm-build-and-cache.md](web/setup-wasm-build-and-cache.md) — 配置 Wasm 构建、内容哈希缓存头与 Service Worker
 ---
 
 ## 🎯 使用方法

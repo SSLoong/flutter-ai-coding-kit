@@ -115,6 +115,10 @@
 
 - [audit-wasm-and-js-interop.md](web/audit-wasm-and-js-interop.md) — 审计 Wasm 兼容性与遗留 JS interop，判断能否上 Wasm
 - [setup-wasm-build-and-cache.md](web/setup-wasm-build-and-cache.md) — 配置 Wasm 构建、内容哈希缓存头与 Service Worker
+### SDK（SDK 版本升级）
+
+- [preview-dart-migrate.md](sdk/preview-dart-migrate.md) — 预览 dart migrate 变更，审查 prepare/bump/cleanup 步骤
+- [apply-and-verify-dart-migrate.md](sdk/apply-and-verify-dart-migrate.md) — 安全应用迁移并用分析、测试、构建验证
 ---
 
 ## 🎯 使用方法

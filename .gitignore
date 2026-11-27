@@ -22,6 +22,9 @@
 build/
 .dart_tool/
 
+# Flutter Widget Previewer cache
+.widget_preview/
+
 # Dependencies
 .packages
 pubspec.lock

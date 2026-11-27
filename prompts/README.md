@@ -107,6 +107,10 @@
 
 - [setup-official-flutter-ai-plugin.md](ai-tooling/setup-official-flutter-ai-plugin.md) — 在编辑器中安装官方 Flutter AI 插件、配置 MCP、下载 rules、与项目模板并存
 - [install-or-ship-package-skills.md](ai-tooling/install-or-ship-package-skills.md) — 从依赖安装 package skills，或为自己的包编写并校验 skills
+### Preview（Widget 预览器）
+
+- [generate-widget-preview.md](preview/generate-widget-preview.md) — 生成 @Preview 注解，在预览器中实时查看组件
+- [customize-preview.md](preview/customize-preview.md) — 定制 wrapper / theme / 自定义注解，排查预览器加载失败
 ---
 
 ## 🎯 使用方法

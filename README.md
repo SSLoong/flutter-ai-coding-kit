@@ -68,6 +68,7 @@ flutter-ai-coding-kit/
 | [Flutter Widget Previewer](workflows/flutter-widget-previewer.md) | ✅ | 用 @Preview 注解在预览器中实时查看组件，快速迭代设计变体 |
 | [Flutter Web Wasm 与缓存](workflows/flutter-web-wasm-and-caching.md) | ✅ | Wasm 编译、内容哈希缓存破坏与 JS interop 审计迁移 |
 | [dart migrate SDK 语言版本升级](workflows/dart-migrate-sdk-upgrade.md) | ✅ | 自动迁移项目的 Dart 语言版本约束并应用必要修复 |
+| [Swift Package Manager 迁移](workflows/swift-package-manager-migration.md) | ✅ | 从 CocoaPods 迁移到 SwiftPM,审计插件支持并安全移除 CocoaPods |
 
 ---
 

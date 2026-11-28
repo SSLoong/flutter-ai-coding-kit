@@ -125,6 +125,14 @@
 
 - [preview-dart-migrate.md](sdk/preview-dart-migrate.md) — 预览 dart migrate 变更，审查 prepare/bump/cleanup 步骤
 - [apply-and-verify-dart-migrate.md](sdk/apply-and-verify-dart-migrate.md) — 安全应用迁移并用分析、测试、构建验证
+
+---
+
+### SPM（Swift Package Manager）
+
+- [audit-spm-and-cocoapods-fallback.md](spm/audit-spm-and-cocoapods-fallback.md) — 审计项目是否启用 SwiftPM，哪些插件仍 fallback 到 CocoaPods
+- [migrate-app-or-plugin-to-spm.md](spm/migrate-app-or-plugin-to-spm.md) — 应用迁移：移除 CocoaPods；插件作者：补 SwiftPM 支持
+
 ---
 
 ## 🎯 使用方法
